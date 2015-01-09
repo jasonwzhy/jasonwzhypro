@@ -14,8 +14,8 @@ def index(request):
 		hstr = hashlib.sha1(hstr).hexdigest()
 		print hstr,signature
 		if hstr==signature:
-			#return HttpResponse(signature)
-			return True
+			return HttpResponse(echostr)
+			#return True
 		else:
 			#return HttpResponse(None)
 			return False
