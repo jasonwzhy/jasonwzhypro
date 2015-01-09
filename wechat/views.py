@@ -12,6 +12,7 @@ def index(request):
 		hslst.sort()
 		hstr = "%s%s%s"%tuple(hslst)
 		hstr = hashlib.sha1(hstr).hexdigest()
+		print hstr,signature
 		if hstr==signature:
 			return HttpResponse(signature)
 		else:
