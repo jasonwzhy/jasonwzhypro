@@ -30,6 +30,7 @@ def index(request):
 		else:
 			return HttpResponse(None)
 	elif request.method == 'POST':
+		print request.body
 		signature = request.GET.get('signature','')
 		timestamp = request.GET.get('timestamp','')
 		nonce = request.GET.get('nonce','')
@@ -39,6 +40,7 @@ def index(request):
 		if wechat.check_signature(signature=signature, timestamp=timestamp, nonce=nonce):
 			wechat.parse_data(body_text)
 			message = wechat.get_message()
+			print message
 			if isinstance(message, TextMessage):
 				response = wechat.response_text(content=u'文字信息')
 		elif isinstance(message, VoiceMessage):
