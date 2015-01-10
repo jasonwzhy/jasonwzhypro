@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import hashlib
-def index(request):
+# Create your views here.
+def ifsverify(request):
 	if request.method == 'GET':
 		signature = request.GET.get('signature','')
 		timestamp = request.GET.get('timestamp','')
@@ -19,4 +20,4 @@ def index(request):
 		else:
 			#return HttpResponse(None)
 			return False
-# Create your views here.
+
