@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import hashlib
+from django.views.decorators.csrf import csrf_exempt
+from xml.etree import ElementTree as etree
+
 # Create your views here.
+@csrf_exempt
 def ifsverify(request):
 	if request.method == 'GET':
 		print request.GET
@@ -22,7 +26,7 @@ def ifsverify(request):
 			#return HttpResponse(None)
 			return False
 	elif request.method == 'POST':
-		print request.POST
+		print request.body
 def index(request):
 	return HttpResponse('hello wechat')
 def manageindex(request):
