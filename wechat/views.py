@@ -4,6 +4,7 @@ import hashlib
 # Create your views here.
 def ifsverify(request):
 	if request.method == 'GET':
+		print request.GET
 		signature = request.GET.get('signature','')
 		timestamp = request.GET.get('timestamp','')
 		nonce = request.GET.get('nonce','')
@@ -20,6 +21,8 @@ def ifsverify(request):
 		else:
 			#return HttpResponse(None)
 			return False
+	elif request.method == 'POST':
+		print request.POST
 def index(request):
 	return HttpResponse('hello wechat')
 def manageindex(request):
