@@ -40,9 +40,11 @@ def index(request):
 		if wechat.check_signature(signature=signature, timestamp=timestamp, nonce=nonce):
 			wechat.parse_data(body_text)
 			message = wechat.get_message()
-			print '\n',message,'\n'
+			print '\n',message.type,'\n'
 			if isinstance(message, TextMessage):
+				print 'in if !'
 				response = wechat.response_text(content=u'文字信息')
+				print response
 		print response
 		return HttpResponse(response)
 def manageindex(request):
