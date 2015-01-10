@@ -22,3 +22,5 @@ def ifsverify(request):
 			return False
 def index(request):
 	return HttpResponse('hello wechat')
+def manageindex(request):
+	return HttpResponse('manageindex')

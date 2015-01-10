@@ -3,5 +3,5 @@ from wechat import views
 urlpatterns = patterns('',
 	url(r'^$',views.index),
 	url(r'^ifsverify/$',views.ifsverify),
-	url(r'^manage/',)
+	url(r'^manage/',views.manageindex),
 )
