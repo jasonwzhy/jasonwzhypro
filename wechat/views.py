@@ -43,7 +43,7 @@ def index(request):
 			print '\n',message.type,'\n'
 			if isinstance(message, TextMessage):
 				print 'in if !'
-				response = wechat.response_text(content='hehehe')
+				response = wechat.response_text(content='哈哈哈')
 				print response
 		print response
 		return HttpResponse(response)
