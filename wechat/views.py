@@ -20,4 +20,5 @@ def ifsverify(request):
 		else:
 			#return HttpResponse(None)
 			return False
-
+def index(request):
+	return HttpResponse('hello wechat')
