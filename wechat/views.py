@@ -43,6 +43,7 @@ def index(request):
 			print '\n',message.type,'\n'
 			if isinstance(message, TextMessage):
 				print 'in if !'
+				print u'中文'
 				response = wechat.response_text(content='哈哈哈')
 				print response
 		print response
