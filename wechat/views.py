@@ -71,3 +71,74 @@ def index(request):
 		return HttpResponse(response)
 def manageindex(request):
 	return HttpResponse('manageindex')
+def wc_create_menu(request):
+	menu_dict = {
+           'button':[
+				{
+					'name':u'客站资讯',
+					'sub_button':[
+                    	{
+                    		'type':'view',
+                            'name':u'客站介绍',
+                            'url':'http://www.soso.com/'
+                    	},
+                    	{
+                    		'type':'view',
+                            'name':u'团队展示',
+                            'url':'http://www.soso.com/'
+                    	},
+                    	{
+                    		'type':'view',
+                            'name':u'最新动态',
+                            'url':'http://www.soso.com/'
+                    	},
+                    	{
+                    		'type':'view',
+                            'name':u'通知公告',
+                            'url':'http://www.soso.com/'
+                    	}
+                    ]
+				},
+				{
+					'name':u'服务中心',
+					'sub_button':[
+                        {
+                            'type':'view',
+                            'name':u'中心介绍',
+                            'url':'http://www.soso.com/'
+                        },
+                        {
+                            'type':'view',
+                            'name':u'车次动态',
+                            'url':'http://www.soso.com/'
+                        },
+                        {
+                            'type':'view',
+                            'name':u'常用查询',
+                            'url':'http://www.soso.com/'
+                        },
+                        {
+                            'type':'view',
+                            'name':u'投诉建议',
+                            'url':'http://www.soso.com/'
+                        }
+                    ]
+				},
+				{
+					'name':u'优惠互动',
+					'sub_button':[
+                        {
+                            'type': 'view', 
+                            'name': u'商户展示', 
+                            'url': 'http://115.28.107.224/TeCollege/index.php?m=Wechat&a=index'
+                        }, 
+                        {
+                            'type': 'view', 
+                            'name': u'游戏互动', 
+                            'url': 'http://115.28.107.224/TeCollege/index.php?m=ZhuanPan&a=ZhuanPan'
+                        }
+                    ]
+				}
+            ]}
+	wechat = WechatBasic(appid='wx5d140785dfae330c', appsecret='7d665a6f144785c72d54ef280380e85e')
+	print wechat.create_menu(menu_dict)
