@@ -1,10 +1,16 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import HttpResponse
-import hashlib
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
+
+import hashlib
 from xml.etree import ElementTree as etree
 
+"""
+wechat interface
+"""
 from wechat_sdk.basic import WechatBasic
 from wechat_sdk.messages import (
     TextMessage, VoiceMessage, ImageMessage, VideoMessage, LinkMessage, LocationMessage, EventMessage
@@ -69,8 +75,7 @@ def index(request):
 					response = wechat.response_text(content=u'自定义菜单跳转链接事件')
 		print response
 		return HttpResponse(response)
-def manageindex(request):
-	return HttpResponse('manageindex')
+
 def wc_create_menu(request):
 	menu_dict = {
            'button':[
@@ -142,3 +147,32 @@ def wc_create_menu(request):
             ]}
 	wechat = WechatBasic(appid='wx5d140785dfae330c', appsecret='7d665a6f144785c72d54ef280380e85e')
 	print wechat.create_menu(menu_dict)
+"""
+ * * * * * * * * * * * * * * * * * * * * * * * * 
+"""
+
+"""
+wechat manage
+"""
+def manageindex(request):
+	return HttpResponse('manageindex')
+"""
+ * * * * * * * * * * * * * * * * * * * * * * * * 
+"""
+
+"""
+wechat east station info
+"""
+def esinfoindex(request):
+	return render_to_response("estation/stationinfo.html",RequestContext(request))
+
+"""
+ * * * * * * * * * * * * * * * * * * * * * * * * 
+"""
+
+
+"""
+wechat 
+"""
+def esshops(request):
+	pass
