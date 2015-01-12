@@ -80,22 +80,22 @@ def wc_create_menu(request):
                     	{
                     		'type':'view',
                             'name':u'客站介绍',
-                            'url':'http://www.soso.com/'
+                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203349576&idx=1&sn=8ff27199f38b040273d9705802c52b44#rd'
                     	},
                     	{
                     		'type':'view',
                             'name':u'团队展示',
-                            'url':'http://www.soso.com/'
+                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203349576&idx=1&sn=8ff27199f38b040273d9705802c52b44#rd'
                     	},
                     	{
                     		'type':'view',
                             'name':u'最新动态',
-                            'url':'http://www.soso.com/'
+                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203429156&idx=1&sn=4104fe74654ac831400f8636f36f508a#rd'
                     	},
                     	{
                     		'type':'view',
                             'name':u'通知公告',
-                            'url':'http://www.soso.com/'
+                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203429982&idx=1&sn=ba483cecf94e41786286c8ea22b991b4#rd'
                     	}
                     ]
 				},
@@ -105,22 +105,22 @@ def wc_create_menu(request):
                         {
                             'type':'view',
                             'name':u'中心介绍',
-                            'url':'http://www.soso.com/'
+                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203660894&idx=1&sn=80ead2fab876353a0444691b834b53c8#rd'
                         },
                         {
                             'type':'view',
                             'name':u'车次动态',
-                            'url':'http://www.soso.com/'
+                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203660915&idx=1&sn=10b2a92885a30a9de89ea5bface55600#rd'
                         },
                         {
                             'type':'view',
                             'name':u'常用查询',
-                            'url':'http://www.soso.com/'
+                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203661033&idx=1&sn=637b4e1997cca108fd7236c6ad402754#rd'
                         },
                         {
                             'type':'view',
                             'name':u'投诉建议',
-                            'url':'http://www.soso.com/'
+                            'url':'http://115.28.107.224/EastStation/?m=home&c=Complaints'
                         }
                     ]
 				},
