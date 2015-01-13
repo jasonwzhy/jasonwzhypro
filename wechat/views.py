@@ -70,7 +70,23 @@ def index(request):
 				elif message.type == 'location':
 					response = wechat.response_text(content=u'上报地理位置事件')
 				elif message.type == 'click':
-					response = wechat.response_text(content=u'自定义菜单点击事件')
+					if message.key == 'clicktesta':
+						articles = [
+							{
+								'title':'testa1',
+								'description':u'这是测试',
+								'picurl':'http://a.hiphotos.baidu.com/image/w%3D310/sign=3f6b24fb84d6277fe912343918391f63/91529822720e0cf36fa0febb0946f21fbe09aa1f.jpg',
+								'url':'www.baidu.com'
+							},
+							{
+								'title':'testa1',
+								'description':u'这是测试',
+								'picurl':'http://a.hiphotos.baidu.com/image/w%3D310/sign=3f6b24fb84d6277fe912343918391f63/91529822720e0cf36fa0febb0946f21fbe09aa1f.jpg',
+								'url':'www.baidu.com'
+							}
+						]
+						response = wechat.response_news(articles)
+					#response = wechat.response_text(content=u'自定义菜单点击事件')
 				elif message.type == 'view':
 					response = wechat.response_text(content=u'自定义菜单跳转链接事件')
 		print response
@@ -141,6 +157,16 @@ def wc_create_menu(request):
                             'type': 'view', 
                             'name': u'游戏互动', 
                             'url': 'http://115.28.107.224/TeCollege/index.php?m=ZhuanPan&a=ZhuanPan'
+                        },
+                        {
+                        	'type': 'click',
+                        	'name': 'clicktestA',
+                        	'key':	'clicktesta'
+                        },
+                        {
+                        	'type':'click',
+                        	'name':'clicktestB',
+                        	'key': 'clicktestb'
                         }
                     ]
 				}
