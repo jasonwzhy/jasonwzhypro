@@ -40,7 +40,7 @@ def index(request):
 		timestamp = request.GET.get('timestamp','')
 		nonce = request.GET.get('nonce','')
 		body_text = request.body
-		
+		print body_text
 		wechat = WechatBasic(token=token)
 		if wechat.check_signature(signature=signature, timestamp=timestamp, nonce=nonce):
 			wechat.parse_data(body_text)
