@@ -75,16 +75,22 @@ def index(request):
 							{
 								'title':'testa1',
 								'description':u'这是测试',
-								'picurl':'http://a.hiphotos.baidu.com/image/w%3D310/sign=3f6b24fb84d6277fe912343918391f63/91529822720e0cf36fa0febb0946f21fbe09aa1f.jpg',
+								'picurl':'http://www.pic16.com/wzcapi/ql-2006/ql2006-1.jpg',
 								'url':'www.baidu.com'
 							},
 							{
 								'title':'testa1',
 								'description':u'这是测试',
-								'picurl':'http://a.hiphotos.baidu.com/image/w%3D310/sign=3f6b24fb84d6277fe912343918391f63/91529822720e0cf36fa0febb0946f21fbe09aa1f.jpg',
+								'picurl':'http://tupian.baike.com/a0_10_74_01000000000000119087416551510_jpg.html',
+								'url':'www.baidu.com'
+							},
+							{
+								'title':'testa1',
+								'description':u'这是测试',
+								'picurl':'http://a.hiphotos.baidu.com/image/w%%3D310/sign=3f6b24fb84d6277fe912343918391f63/91529822720e0cf36fa0febb0946f21fbe09aa1f.jpg',
 								'url':'www.baidu.com'
 							}
-						]
+						] 
 						response = wechat.response_news(articles)
 					#response = wechat.response_text(content=u'自定义菜单点击事件')
 				elif message.type == 'view':
