@@ -70,6 +70,7 @@ def index(request):
 				elif message.type == 'location':
 					response = wechat.response_text(content=u'上报地理位置事件')
 				elif message.type == 'click':
+					print message.type ,message.key,'\n'
 					if message.key == 'estationinfo':
 						articles = [{
 								'title':'成都东客站介绍',
