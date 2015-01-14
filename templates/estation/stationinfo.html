@@ -5,24 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-<link rel="apple-touch-startup-image" href="images/apple-touch-startup-image-320x460.png" />
+<link rel="apple-touch-icon" href="{{ STATIC_URL }}images/estationinfo/apple-touch-icon.png" />
+<link rel="apple-touch-startup-image" href="{{ STATIC_URL }}images/estationinfo/apple-touch-startup-image-320x460.png" />
 <meta name="author" content="FamousThemes" />
 <meta name="description" content="GoMobile - A next generation web app theme" />
 <meta name="keywords" content="mobile web app, mobile template, mobile design, mobile app design, mobile app theme, mobile wordpress theme, my mobile app" />
 <title>GoMobile - A next generation web app theme</title>
-<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/style.css"/>
-<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/metro.css"/>
-<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/idangerous.swiper.css"/>
-<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/swipebox.css"/>
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/style.css">
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/medical.css">
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/idangerous.swiper.css">
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/swipebox.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'/>
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.10.1.min.js"></script>
 <script src="{{ STATIC_URL }}js/jquery.validate.min.js" type="text/javascript"></script>
 </head>
 <body>
   <div id="header">
-      <div class="gohome radius20"><a href="#"><img src="images/icons/home.png" alt="" title="" /></a></div>
-      <div class="gomenu radius20"><a href="#" onclick="swiperParent.swipeTo(8);"><img src="images/icons/contact.png" alt="" title="" /></a></div>
+      <div class="gohome"><a href="#"><img src="{{ STATIC_URL }}images/estationinfo/icons/home.png" alt="" title="" /></a></div>
+      <div class="gomenu"><a href="#" onclick="swiperParent.swipeTo(9);"><img src="{{ STATIC_URL }}images/estationinfo/icons/contact.png" alt="" title="" /></a></div>
   </div>
   <div class="swiper-container swiper-parent">
     <div class="swiper-wrapper">
@@ -30,115 +30,64 @@
       <!--Menu page-->
       <div class="swiper-slide sliderbg_menu">
           <div class="swiper-container swiper-nested">
-                   <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                                  <div class="slide-inner">
-                                        <div class="logo"><a href="#">GoMobile</a></div>
-                                        <div class="menu">
-                                        <ul>
-                                        <li class="green"><a href="#" onclick="swiperParent.swipeTo(1);"><img src="images/icons/about.png" alt="" title="" /><span>About Us</span></a></li>
-                                        <li class="red"><a href="#" onclick="swiperParent.swipeTo(2);"><img src="images/icons/tools.png" alt="" title="" /><span>Services</span></a></li>
-                                        <li class="blue"><a href="#" onclick="swiperParent.swipeTo(3);"><img src="images/icons/blog.png" alt="" title="" /><span>Blog</span></a></li>
-                                        <li class="orange"><a href="#" onclick="swiperParent.swipeTo(4);"><img src="images/icons/docs.png" alt="" title="" /><span>Portfolio</span></a></li>
-                                        <li class="purple"><a href="#" onclick="swiperParent.swipeTo(5);"><img src="images/icons/photos.png" alt="" title="" /><span>Gallery</span></a></li>
-                                        <li class="yellow"><a href="#" onclick="swiperParent.swipeTo(6);"><img src="images/icons/clients.png" alt="" title="" /><span>Clients</span></a></li>
-                                        <li class="pink"><a href="#" onclick="swiperParent.swipeTo(7);"><img src="images/icons/twitter.png" alt="" title="" /><span>Twitter</span></a></li>
-                                        <li class="bluegreen"><a href="#" onclick="swiperParent.swipeTo(8);"><img src="images/icons/contact.png" alt="" title="" /><span>Contact</span></a></li>
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                        </div>
-                                 </div>
-                         </div>
-                   </div>
+             <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                      <div class="slide-inner">
+                            <!-- <div class="logo"><a href="#"><img src="{{ STATIC_URL }}images/estationinfo/logo.png" alt="" title="" border="0" /></a></div> -->
+                            <div class="banner">
+                              <ul>
+                                  <li style="background-image: url({{ STATIC_URL }}images/estationinfo/1.jpg); background-size: 100% 100%;">
+                                    <h3>成都东站汽车客运站.</h3>
+                                  </li>
+                                  <li style="background-image: url({{ STATIC_URL }}images/estationinfo/2.jpg); background-size: 100% 100%;"><h3>成都东站汽车客运站.</h3></li>
+                                  <li style="background-image: url({{ STATIC_URL }}images/estationinfo/3.jpg); background-size: 100% 100%;"><h3>成都东站汽车客运站.</h3></li>
+                                  <li style="background-image: url({{ STATIC_URL }}images/estationinfo/4.jpg); background-size: 100% 100%;"><h3>成都东站汽车客运站.</h3></li>
+                              </ul>
+                              <ol class="dots"><li class="dot">1</li><li class="dot">2</li><li class="dot">3</li><li class="dot active">4</li></ol>
+                            </div>
+                            <div class="menu" style="padding-top:10%;">
+                            <ul>
+                            <li><a href="#" onclick="swiperParent.swipeTo(1);"><img src="{{ STATIC_URL }}images/estationinfo/icons/about.png" alt="" title="" /><span>客站概要</span></a></li>
+                            <li><a href="#" onclick="swiperParent.swipeTo(2);"><img src="{{ STATIC_URL }}images/estationinfo/icons/tools.png" alt="" title="" /><span>特色介绍</span></a></li>
+                            <!-- <li><a href="#" onclick="swiperParent.swipeTo(3);"><img src="{{ STATIC_URL }}images/estationinfo/icons/blog.png" alt="" title="" /><span>Blog</span></a></li>
+                            <li><a href="#" onclick="swiperParent.swipeTo(4);"><img src="{{ STATIC_URL }}images/estationinfo/icons/docs.png" alt="" title="" /><span>Portfolio</span></a></li> -->
+                            <li><a href="#" onclick="swiperParent.swipeTo(3);"><img src="{{ STATIC_URL }}images/estationinfo/icons/photos.png" alt="" title="" /><span>总揽相册</span></a></li>
+                            <!-- <li><a href="#" onclick="swiperParent.swipeTo(6);"><img src="{{ STATIC_URL }}images/estationinfo/icons/videos.png" alt="" title="" /><span>Videos</span></a></li>
+                            <li><a href="#" onclick="swiperParent.swipeTo(7);"><img src="{{ STATIC_URL }}images/estationinfo/icons/clients.png" alt="" title="" /><span>Clients</span></a></li>
+                            <li><a href="#" onclick="swiperParent.swipeTo(8);"><img src="{{ STATIC_URL }}images/estationinfo/icons/twitter.png" alt="" title="" /><span>Twitter</span></a></li>
+                            <li><a href="#" onclick="swiperParent.swipeTo(9);"><img src="{{ STATIC_URL }}images/estationinfo/icons/contact.png" alt="" title="" /><span>Contact</span></a></li> -->
+                            </ul>
+                            <div class="clearfix"></div>
+                            </div>
+                     </div>
+                 </div>
+             </div>
                   <div class="swiper-scrollbar"></div>
           </div> 
       </div>
       
       <!--Page 1 content-->
-      <div class="swiper-slide sliderbg green">
+      <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
                     <div class="swiper-slide">
                               <div class="slide-inner">
                                         <div class="pages_container">
-                                        <h2 class="page_title">About Us</h2>
-                                        <div class="image_single"><img src="images/page_photo.jpg" alt="" title="" border="0" /></div>
-                                        <div class="image_caption blue blue_borderbottom">Image title</div>
-                                        <h3>Imagination is our power</h3>
-                                        <blockquote>Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product or service. <span class="quote_author">-Steve Jobs</span></blockquote>
+                                        <h2 class="page_title">客站概要介绍</h2>
+                                        <div class="image_single radius4"><img src="{{ STATIC_URL }}images/estationinfo/page_photo.jpg" alt="" title="" border="0" /></div>
+                                        <h3>成都东站汽车客运站</h3>
+                                        <blockquote>成都东站汽车客运站占地87.2亩，总建筑面积9.6万平方米，最大的亮点是与铁路、公交、出租等的无缝连接零换乘。该站位于东客站东广场附近，地上三层、地下两层。成都东站汽车客运站将配置12条、87班客运线路至龙泉驿、青白江、金堂、郫县等地。2011年9月30日起试运营，班线可直达12个区市县。该站以实行联网售票。</blockquote>
                                         
-                                        <h3>Just a simple listing</h3>
-                                        <ul class="listing">
-                                        <li>Proin dignissim risus ut quam aliquam dignissim.</li>
-                                        <li>Nunc erat eros, cursus et commodo vitae, pulvinar ac libero.</li>
-                                        <li>In erat elit, bibendum vitae commodo vitae, bibendum non justo.</li>
-                                        </ul>
-                                        <h3>A more detailed listing</h3>
-                                        <ul class="listing_detailed">
-                                        <li><a href="#">Proin dignissim risus</a></li>
-                                        <li><a href="#">Nunc erat eros, cursus et</a></li>
-                                        <li><a href="#">In erat elit, bibendum</a></li>
-                                        </ul>
+                                        <h3>运营</h3>
+                                        <blockquote>2011年9月30日，成都最大的长途客运站———成都东站汽车客运站正式开始试运营。在投入试运营的新客运站里，还有与机场类似的行李处理装置，旅客在购票时可将行李寄存在售票大厅，然后再到候车大厅候车，在乘客所乘班车发车时有专人将行李运送到客车上</blockquote>
                                         
-                                        <h2>Toggle styles</h2>
-        
-                                        <div class="toogle_wrap">
-                                            <div class="trigger"><a href="#">toggle with text</a></div>
-                                
-                                            <div class="toggle_container">
-                                            <p>
-                                        Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                            </div>
-                                        </div>
-        
-                                        <div class="toogle_wrap">
-                                            <div class="trigger"><a href="#">toggle with lists</a></div>
-                                
-                                            <div class="toggle_container">
-                                            <ul class="listing_detailed">
-                                            <li>Consectetur adipisicing elit sed</li>
-                                            <li>Sed do eiusmod tempor incididunt</li>
-                                            <li>Ut enim ad minim veniam</li>
-                                            </ul>
-                                            </div>
-                                        </div> 
-        
-                                        <h2>Some flexible <span class="tag">tabs</span></h2>
+                                        <h3>县班线</h3>
+                                        <blockquote>只开通县班线，因为其功能定位主要是铁路车站的配套站，作用是快速疏散来到成都前往周边各地的旅客，比如现在东客站每日本来就有8趟成渝动车，如果再开行成渝大巴，则与铁路重复。</blockquote>
+                                              
                                         
-                                        <ul id="tabsmenu" class="tabsmenu">
-                                            <li class="active"><a href="#tab1">Text tab</a></li>
-                                            <li><a href="#tab2">Listing tab</a></li>
-                                            <li><a href="#tab3">Quote tab</a></li>
-                                        </ul>
-                                        <div id="tab1" class="tabcontent">
-                                            <h4>Simple text title</h4>
-                                            <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </p>
-                                        </div>
-                                        <div id="tab2" class="tabcontent">
-                                            <h4>Listing title</h4>
-                                            <ul class="listing">
-                                            <li>Consectetur adipisicing elit sed</li>
-                                            <li>Sed do eiusmod tempor incididunt</li>
-                                            <li>Ut enim ad minim veniam</li>
-                                            </ul>
-                                        </div>
-                                
-                                        <div id="tab3" class="tabcontent">
-                                            <h4>Quote title</h4>
-                                            <blockquote>Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product or service. <span class="quote_author">-Steve Jobs</span></blockquote>
-                                        </div>       
-                                        
-                                        <h2>Some buttons styles</h2>
-                                        <a href="#" class="button_12 purple">Button 1/2</a>  <a href="#" class="button_12 blue">Button 1/2</a>
-                                        <a href="#" class="button_12 red">Button 1/2</a>  <a href="#" class="button_12 orange">Button 1/2</a> 
-                                        <a href="#" class="button_12 black">Button 1/2</a>  <a href="#" class="button_12 gray">Button 1/2</a>  
-                                        <a href="#" class="button_11 yellow">Full width button</a>
-                                        
+                                      
                                         <div class="clearfix"></div>
-                        <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+                                          <div class="scrolltop"><a href="#"><img src="{{ STATIC_URL }}images/estationinfo/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -149,96 +98,21 @@
      </div>
       
       <!--Page 2 content-->
-      <div class="swiper-slide sliderbg red">
+      <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
                     <div class="swiper-slide">
                               <div class="slide-inner">
                                         <div class="pages_container">
-                                        <h2 class="page_title">Our motto</h2>
-                                        <blockquote>Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product or service. <span class="quote_author">-Steve Jobs</span></blockquote>
+                                        <h2 class="page_title">特色介绍</h2>
+                                        <h3>线路齐全</h3>
+                                        <div class="image_single radius4"><img src="{{ STATIC_URL }}images/estationinfo/page_photo2.jpg" alt="" title="" border="0" /></div>
+                                        <blockquote>成都东站汽车客运站是成都东客站综合客运枢纽的重要配套项目，主要承担铁路到发旅客中转接驳和快速疏解功能，做到了与铁路、公交、地铁、出租和社会车辆等交通方式的紧密衔接，实现了多种交通方式的互通互换。经过紧张筹备，东站汽车客运站将于2011年9月30开通试运营。按照东站汽车客运站的功能定位，其客运班线采取逐步配置原则进行丰富和完善，第一阶段主要配置市域内公路客运班线。第一批开通二三圈层12个区市县客运班线12条，运行87班次，包括：龙泉驿、青白江、金堂、郫县、都江堰、温江、崇州、大邑、邛崃、蒲江、新津、双流。具体发车班次见附表。第二批在年底前开通东客站汽车客运站至新都和彭州的客运班线，实现对市域内二三圈层区市县的全覆盖。2012年4月29日开通成都至西昌和攀枝花的高速客运路线.下一阶段将结合铁路运输的情况，逐步扩大东站汽车客运站的运输服务范围，丰富运输线路，充分发挥东站综合运输枢纽的功能。</span></blockquote>
                                         
-                                        <h3>Our main services</h3>
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/services.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Web development</h4>
-                                              <p>Lorem ipsum dolor sit <a href="#">amet consectetur</a> adipisicing elit, <strong>sed do eiusmod</strong> tempor</p>
-                                          </div>
-                                        </div>
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/layout.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Layout design</h4>
-                                          <p>Cras <strong>vestibulum</strong> <a href="#">justo eget lorem</a> semper ac facilisis nulla porta</p>
-                                          </div>
-                                        </div>  
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/pencil.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Drawing</h4>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                          </div>
-                                        </div>
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/code.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Programming</h4>
-                                          <p>Lorem ipsum dolor sit amet, <a href="#"><strong>consectetur adipisicing elit</strong></a>, sed do eiusmod tempor</p>
-                                          </div>
-                                        </div>                                     
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/travel.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Custom work</h4>
-                                          <p>Lorem ipsum dolor sit <a href="#">amet consectetur</a> adipisicing elit, <strong>sed do eiusmod</strong> tempor</p>
-                                          </div>
-                                        </div>
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/security.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Security</h4>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                          </div>
-                                        </div>
-                                        
-                                        <h3>Prices</h3>
-                                        
-                                        <ul class="responsive_table">
-                                             <li class="table_row">
-                                                <div class="table_section_small">Nr</div>
-                                                <div class="table_section">Service</div>
-                                                <div class="table_section">Price</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">01</div>
-                                                <div class="table_section">Web development</div>
-                                                <div class="table_section">1200$</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">02</div>
-                                                <div class="table_section">Drawing</div>
-                                                <div class="table_section">600$</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">03</div>
-                                                <div class="table_section">Custom work</div>
-                                                <div class="table_section">500$</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">04</div>
-                                                <div class="table_section">Layout design</div>
-                                                <div class="table_section">800$</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">05</div>
-                                                <div class="table_section">Security</div>
-                                                <div class="table_section">650$</div> 
-                                             </li>
-                                        </ul>
-                                        
+                                        <h3>功能齐备</h3>
+                                        <blockquote>长途客运站位于成都东站主站房的南侧，紧邻东广场，分为地上三层和地下两层,其中，地上一层是进站大厅、售票大厅、候车大厅和出站大厅。在宽敞的售票大厅内设有26个售票窗口，还预留了8台自助售票机的摆放空间。在售票大厅旁，还有一个200多平方米的旅游线路售票厅，而旁边的候车大厅近 200米长、50多米宽，整齐摆放着几百个座位。地面二楼还设有VIP候车室和老弱病残孕重点旅客候车室,三楼是车站工作区和商业区。通过扶梯来到地下，地下两层分别是长途车进站下客和车辆停放的区域,以及社会车辆的停车位，每天可以让3.8万名旅客自由进出。26个售票窗口；还预留了8台自助售票机的摆放空间；首批12条线路开往周边区市县；旅客在购票时可将行李寄存在售票大厅。</span></blockquote>
                                         <div class="clearfix"></div>
-      <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+      <div class="scrolltop"><a href="#"><img src="{{ STATIC_URL }}images/estationinfo/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -249,379 +123,38 @@
      </div>
      
       <!--Page 3 content-->
-      <div class="swiper-slide sliderbg blue">
-      <div class="swiper-container swiper-nested">
-               <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                              <div class="slide-inner">
-                                        <div class="pages_container">
-                                        <div class="posts_archive_page">
-                                        <h2 class="page_title">Blog</h2>
-                                                <div class="toogle_wrap_blog">
-                                                    <div class="trigger_blog"><a href="#">blog categories</a></div>
-                                                        <div class="toggle_container_blog">
-                                                            <ul class="listing_detailed">
-                                                            <li><a href="#">webdesign work</a></li>
-                                                            <li><a href="#">painted illustrations</a></li>
-                                                            <li><a href="#">programming and javascript</a></li>
-                                                            </ul>
-                                                        </div>
-                                                </div>
-                                                <ul class="posts">
-                                                <li class="post" id="postid1">
-                                                     <a href="#" class="post_more"></a>                     
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">blog category</a>
-                                                     <span class="post_comments">25 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
+  
 
-                                                    <div class="post_left">
-                                                        <span class="day">23</span>
-                                                        <span class="month">june</span>
-                                                    </div>
-
-                                                </li>
-                                                <li class="post" id="postid2">
-                                                     <a href="#" class="post_more"></a>
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Cras vestibulum justo eget lorem semper ac facilisis nulla porta...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">programming</a>
-                                                     <span class="post_comments">18 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
-                                                   
-                                                    <div class="post_left">
-                                                        <span class="day">18</span>
-                                                        <span class="month">sept</span>
-                                                    </div>
-                                                </li>
-                                                <li class="post" id="postid3">
-                                                     <a href="#" class="post_more"></a>                     
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Nam velit sapien, eleifend in tempus volutpat, posuere ullamcorper augue...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">blog category</a>
-                                                     <span class="post_comments">11 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
-
-                                                    <div class="post_left">
-                                                        <span class="day">09</span>
-                                                        <span class="month">dec</span>
-                                                    </div>
-
-                                                </li>
-                                                <li class="post" id="postid4">
-                                                     <a href="#" class="post_more"></a>
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Cras vestibulum justo eget lorem semper ac facilisis nulla porta...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">programming</a>
-                                                     <span class="post_comments">06 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
-                                                   
-                                                    <div class="post_left">
-                                                        <span class="day">12</span>
-                                                        <span class="month">mart</span>
-                                                    </div>
-                                                </li>
-                                                <li class="post" id="postid5">
-                                                     <a href="#" class="post_more"></a>
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Cras vestibulum justo eget lorem semper ac facilisis nulla porta...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">programming</a>
-                                                     <span class="post_comments">18 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
-                                                   
-                                                    <div class="post_left">
-                                                        <span class="day">18</span>
-                                                        <span class="month">sept</span>
-                                                    </div>
-                                                </li>
-                                                </ul>
-                                                <div id="loadMore" class="radius8">Load more posts</div> 
-                                                <div id="showLess" class="radius8">No more posts</div>
-                                                </div> <!--End of posts archive page-->
-
-                                               
-                                                <ul class="post_details_page">
-                                                <li id="postid1">
-                                                <a class="backtoblog">back to blog</a>
-                                                    <h2 class="post_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                                                    <div class="image_single"><img src="images/page_photo.jpg" alt="" title="" border="0" /></div>
-                                                    <div class="image_caption green">Image title</div>
-                                                    <h3>Imagination is our power</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in tempus volutpat, posuere ullamcorper augue. Proin dignissim risus ut quam aliquam dignissim. In erat elit, bibendum vitae commodo vitae, bibendum non justo.<br /><br /> Nunc erat eros, cursus et commodo vitae, pulvinar ac libero. Nullam et scelerisque erat. Cras vestibulum justo eget lorem semper ac facilisis nulla porta.</p>
-                                                    <h3>Comments</h3>
-                                                        <div class="comment_row">
-                                                            <div class="comm_avatar"><img src="images/avatar.jpg" alt="" title="" border="0" /></div>
-                                                            <div class="comm_content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in by <a href="#">comment author</a></p></div>
-                                                        </div>
-                                                        <div class="comment_row">
-                                                            <div class="comm_avatar"><img src="images/avatar.jpg" alt="" title="" border="0" /></div>
-                                                            <div class="comm_content"><p>Nullam et scelerisque erat. Cras vestibulum justo eget lorem semper ac facilisis nulla porta by <a href="#">comment author</a></p></div>
-                                                        </div>
-                                                    <h3>Leave a comment</h3>
-                                                        <div class="form">
-                                                        <form action="">
-                                                        <label>Name:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Email:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Comment:</label>
-                                                        <textarea class="form_textarea" rows="" cols=""></textarea>
-                                                        
-                                                        <input type="submit" class="form_submit green" value="Submit" />
-                                                        </form>
-                                                        </div>
-                                                  </li> 
-                                                  <li id="postid2">
-                                                <a class="backtoblog">back to blog</a>
-                                                    <h2 class="post_title">Cras vestibulum justo eget lorem semper ac facilisis nulla porta</h2>
-                                                    <div class="image_single"><img src="images/page_photo.jpg" alt="" title="" border="0" /></div>
-                                                    <div class="image_caption green">Image title</div>
-                                                    <h3>Imagination is our power</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in tempus volutpat, posuere ullamcorper augue. Proin dignissim risus ut quam aliquam dignissim. In erat elit, bibendum vitae commodo vitae, bibendum non justo.<br /><br /> Nunc erat eros, cursus et commodo vitae, pulvinar ac libero. Nullam et scelerisque erat. Cras vestibulum justo eget lorem semper ac facilisis nulla porta.</p>
-                                                    <h3>Comments</h3>
-                                                        <div class="comment_row">
-                                                            <div class="comm_avatar"><img src="images/avatar.jpg" alt="" title="" border="0" /></div>
-                                                            <div class="comm_content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in by <a href="#">comment author</a></p></div>
-                                                        </div>
-                                                    <h3>Leave a comment</h3>
-                                                        <div class="form">
-                                                        <form action="">
-                                                        <label>Name:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Email:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Comment:</label>
-                                                        <textarea class="form_textarea" rows="" cols=""></textarea>
-                                                        
-                                                        <input type="submit" class="form_submit green" value="Submit" />
-                                                        </form>
-                                                        </div>
-                                                  </li>
-                                                  <li id="postid3">
-                                                <a class="backtoblog">back to blog</a>
-                                                    <h2 class="post_title">Nam velit sapien, eleifend in tempus volutpat, posuere ullamcorper augue</h2>
-                                                    <div class="image_single"><img src="images/page_photo.jpg" alt="" title="" border="0" /></div>
-                                                    <div class="image_caption green">Image title</div>
-                                                    <h3>Imagination is our power</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in tempus volutpat, posuere ullamcorper augue. Proin dignissim risus ut quam aliquam dignissim. In erat elit, bibendum vitae commodo vitae, bibendum non justo.<br /><br /> Nunc erat eros, cursus et commodo vitae, pulvinar ac libero. Nullam et scelerisque erat. Cras vestibulum justo eget lorem semper ac facilisis nulla porta.</p>
-                                                    <h3>Comments</h3>
-                                                        <div class="comment_row">
-                                                            <div class="comm_avatar"><img src="images/avatar.jpg" alt="" title="" border="0" /></div>
-                                                            <div class="comm_content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in by <a href="#">comment author</a></p></div>
-                                                        </div>
-                                                    <h3>Leave a comment</h3>
-                                                        <div class="form">
-                                                        <form action="">
-                                                        <label>Name:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Email:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Comment:</label>
-                                                        <textarea class="form_textarea" rows="" cols=""></textarea>
-                                                        
-                                                        <input type="submit" class="form_submit green" value="Submit" />
-                                                        </form>
-                                                        </div>
-                                                  </li> 
-                                                  <li id="postid4">
-                                                <a class="backtoblog">back to blog</a>
-                                                    <h2 class="post_title">Cras vestibulum justo eget lorem semper ac facilisis nulla porta</h2>
-                                                    <div class="image_single"><img src="images/page_photo.jpg" alt="" title="" border="0" /></div>
-                                                    <div class="image_caption green">Image title</div>
-                                                    <h3>Imagination is our power</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in tempus volutpat, posuere ullamcorper augue. Proin dignissim risus ut quam aliquam dignissim. In erat elit, bibendum vitae commodo vitae, bibendum non justo.<br /><br /> Nunc erat eros, cursus et commodo vitae, pulvinar ac libero. Nullam et scelerisque erat. Cras vestibulum justo eget lorem semper ac facilisis nulla porta.</p>
-                                                    <h3>Comments</h3>
-                                                        <div class="comment_row">
-                                                            <div class="comm_avatar"><img src="images/avatar.jpg" alt="" title="" border="0" /></div>
-                                                            <div class="comm_content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in by <a href="#">comment author</a></p></div>
-                                                        </div>
-                                                    <h3>Leave a comment</h3>
-                                                        <div class="form">
-                                                        <form action="">
-                                                        <label>Name:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Email:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Comment:</label>
-                                                        <textarea class="form_textarea" rows="" cols=""></textarea>
-                                                        
-                                                        <input type="submit" class="form_submit green" value="Submit" />
-                                                        </form>
-                                                        </div>
-                                                  </li>
-                                                  <li id="postid5">
-                                                <a class="backtoblog">back to blog</a>
-                                                    <h2 class="post_title">Cras vestibulum justo eget lorem semper ac facilisis nulla porta</h2>
-                                                    <div class="image_single"><img src="images/page_photo.jpg" alt="" title="" border="0" /></div>
-                                                    <div class="image_caption green">Image title</div>
-                                                    <h3>Imagination is our power</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in tempus volutpat, posuere ullamcorper augue. Proin dignissim risus ut quam aliquam dignissim. In erat elit, bibendum vitae commodo vitae, bibendum non justo.<br /><br /> Nunc erat eros, cursus et commodo vitae, pulvinar ac libero. Nullam et scelerisque erat. Cras vestibulum justo eget lorem semper ac facilisis nulla porta.</p>
-                                                    <h3>Comments</h3>
-                                                        <div class="comment_row">
-                                                            <div class="comm_avatar"><img src="images/avatar.jpg" alt="" title="" border="0" /></div>
-                                                            <div class="comm_content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit sapien, eleifend in by <a href="#">comment author</a></p></div>
-                                                        </div>
-                                                    <h3>Leave a comment</h3>
-                                                        <div class="form">
-                                                        <form action="">
-                                                        <label>Name:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Email:</label>
-                                                        <input type="text" class="form_input" />
-                                                        <label>Comment:</label>
-                                                        <textarea class="form_textarea" rows="" cols=""></textarea>
-                                                        
-                                                        <input type="submit" class="form_submit green" value="Submit" />
-                                                        </form>
-                                                        </div>
-                                                  </li>
-                                                </ul>
-                    <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
-                                        </div>
-                                        <!--End of page container-->
-                              </div>
-                    </div>
-              </div>
-              <div class="swiper-scrollbar"></div>
-     </div>
-     </div>
-     
      <!--Page 4 content-->
-      <div class="swiper-slide sliderbg orange">
-      <div class="swiper-container swiper-nested">
-               <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                              <div class="slide-inner">
-                                        <div class="pages_container">
-                                        <h2 class="page_title">Portfolio</h2>
-                                        <div class="toogle_wrap">
-                                            <div class="trigger"><a href="#">portfolio categories</a></div>
-                                            <div class="toggle_container">
-                                            <ul class="listing_detailed">
-                                            <li><a href="#">webdesign work</a></li>
-                                            <li><a href="#">painted illustrations</a></li>
-                                            <li><a href="#">programming and javascript</a></li>
-                                            </ul>
-                                            </div>
-                                        </div>
-                                        <div class="portfolio_item">
-                                             <div class="portfolio_image"><a rel="gallery-1" href="images/portfolio_thumb.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb.jpg" alt="" title="" border="0" /></a></div>
-                                                 <div class="portfolio_details">
-                                                 <h4>Webdesign work</h4>
-                                                 <p>Nullam et scelerisque erat. Cras vestibulum justo...</p>
-                                                 <a rel="gallery-2" href="images/portfolio_thumb.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
-                                                 </div>
-                                        </div>
-                                        <div class="portfolio_item">
-                                             <div class="portfolio_image"><a rel="gallery-1" href="images/portfolio_thumb2.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb2.jpg" alt="" title="" border="0" /></a></div>
-                                                 <div class="portfolio_details">
-                                                 <h4>Mobile development</h4>
-                                                 <p>Cras vestibulum justo eget lorem semper ac facilisis...</p>
-                                                 <a rel="gallery-2" href="images/portfolio_thumb2.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
-                                                 </div>
-                                        </div>
-                                        <div class="portfolio_item">
-                                             <div class="portfolio_image"><a rel="gallery-1" href="images/portfolio_thumb3.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb3.jpg" alt="" title="" border="0" /></a></div>
-                                                 <div class="portfolio_details">
-                                                 <h4>Applications</h4>
-                                                 <p>Sed ut felis non arcu pulvinar molestie....</p>
-                                                 <a rel="gallery-2" href="images/portfolio_thumb3.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
-                                                 </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        
-                                        <h3>Portfolio with round images</h3>
-                                        <div class="portfolio_item">
-                                             <div class="portfolio_image_round"><a rel="gallery-1" href="images/portfolio_thumb.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb.jpg" alt="" title="" border="0" /></a></div>
-                                                 <div class="portfolio_details">
-                                                 <h4>Webdesign work</h4>
-                                                 <p>Nullam et scelerisque erat. Cras vestibulum justo...</p>
-                                                 <a rel="gallery-2" href="images/portfolio_thumb.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
-                                                 </div>
-                                        </div>
-                                         <div class="portfolio_item">
-                                             <div class="portfolio_image_round"><a rel="gallery-1" href="images/portfolio_thumb2.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb2.jpg" alt="" title="" border="0" /></a></div>
-                                                 <div class="portfolio_details">
-                                                 <h4>Mobile development</h4>
-                                                 <p>Cras vestibulum justo eget lorem semper ac facilisis...</p>
-                                                 <a rel="gallery-2" href="images/portfolio_thumb2.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
-                                                 </div>
-                                        </div>
-                                        <div class="portfolio_item">
-                                             <div class="portfolio_image_round"><a rel="gallery-1" href="images/portfolio_thumb3.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb3.jpg" alt="" title="" border="0" /></a></div>
-                                                 <div class="portfolio_details">
-                                                 <h4>Applications</h4>
-                                                 <p>Sed ut felis non arcu pulvinar molestie....</p>
-                                                 <a rel="gallery-2" href="images/portfolio_thumb3.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
-                                                 </div>
-                                        </div>
-                                           
-                                        <div class="clearfix"></div>
-                        <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
-                                        </div>
-                                        <!--End of page container-->
-                              </div>
-                    </div>
-              </div>
-              <div class="swiper-scrollbar"></div>
-     </div>
-     </div>
+    
      
       <!--Page 5 content-->
-      <div class="swiper-slide sliderbg purple">
+      <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
                     <div class="swiper-slide">
                               <div class="slide-inner">
                                         <div class="pages_container">
-                                        <h2 class="page_title">Photo Gallery 1/3</h2>
+                                        <h3 class="page_title">客运站相册</h3>
                                             <ul class="photo_gallery_13">
-                                            <li><a rel="gallery-3" href="images/photos/photo1.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo1.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-3" href="images/photos/photo2.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo2.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-3" href="images/photos/photo3.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo3.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-3" href="images/photos/photo4.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo4.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-3" href="images/photos/photo5.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo5.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-3" href="images/photos/photo6.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo6.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-3" href="{{ STATIC_URL }}images/estationinfo/photos/photo1.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo1.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-3" href="{{ STATIC_URL }}images/estationinfo/photos/photo2.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo2.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-3" href="{{ STATIC_URL }}images/estationinfo/photos/photo3.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo3.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-3" href="{{ STATIC_URL }}images/estationinfo/photos/photo4.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo4.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-3" href="{{ STATIC_URL }}images/estationinfo/photos/photo5.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo5.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-3" href="{{ STATIC_URL }}images/estationinfo/photos/photo6.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo6.jpg" alt="image"/></a></li>
                                             </ul>
-                                        <h2>Photo Gallery 1/2</h2>
+
                                             <ul class="photo_gallery_12">    
-                                            <li><a rel="gallery-4" href="images/photos/photo7.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo7.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-4" href="images/photos/photo8.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo8.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-4" href="images/photos/photo9.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo9.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-4" href="images/photos/photo10.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo10.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-4" href="{{ STATIC_URL }}images/estationinfo/photos/photo7.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo7.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-4" href="{{ STATIC_URL }}images/estationinfo/photos/photo8.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo8.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-4" href="{{ STATIC_URL }}images/estationinfo/photos/photo9.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo9.jpg" alt="image"/></a></li>
+                                            <li><a rel="gallery-4" href="{{ STATIC_URL }}images/estationinfo/photos/photo10.jpg" title="Photo title" class="swipebox"><img src="{{ STATIC_URL }}images/estationinfo/photos/photo10.jpg" alt="image"/></a></li>
                                             
                                             </ul>
-                                        <h2>Photo Gallery 1/1</h2>    
-                                            <ul class="photo_gallery_11">
-                                            <li><a rel="gallery-5" href="images/photos/photo11.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo11.jpg" alt="image"/></a></li>
-                                            </ul>
-                                        <h2 class="page_title">Round corners 1/3</h2>
-                                            <ul class="photo_gallery_13_round">
-                                            <li><a rel="gallery-6" href="images/photos/photo1.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo1.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-6" href="images/photos/photo2.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo2.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-6" href="images/photos/photo3.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo3.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-6" href="images/photos/photo4.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo4.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-6" href="images/photos/photo5.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo5.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-6" href="images/photos/photo6.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo6.jpg" alt="image"/></a></li>
-                                            </ul>
+                                       
                                          <div class="clearfix"></div> 
-                       <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+                       <div class="scrolltop"><a href="#"><img src="{{ STATIC_URL }}images/estationinfo/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -630,128 +163,13 @@
               <div class="swiper-scrollbar"></div>
      </div>
      </div>
-
+      <!--Page 6 content-->
+    
       <!--Page 7 content-->
-      <div class="swiper-slide sliderbg yellow">
-      <div class="swiper-container swiper-nested">
-               <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                              <div class="slide-inner">
-                                        <div class="pages_container">
-                                        <h2 class="page_title">Our Clients</h2>
-                                       <div class="client_row"> 
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/clients.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Web company</h4>
-                                          <p>Lorem ipsum dolor sit amet, <a href="#"><strong>consectetur adipisicing elit</strong></a>, sed do eiusmod tempor</p>
-                                          </div>
-                                        </div> 
-                                        <h3>Things we done for this client:</h3>
-                                        <ul class="listing">
-                                        <li>Proin dignissim risus ut quam aliquam dignissim.</li>
-                                        <li>Nunc erat eros, cursus et commodo vitae, pulvinar ac libero.</li>
-                                        <li>In erat elit, bibendum vitae commodo vitae, bibendum non justo.</li>
-                                        </ul> 
-                                        <a href="#" class="button_12 green">See work</a>  <a href="#" class="button_12 blue">Client web</a> 
-                                      </div>
-                                      <div class="client_row">                                  
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/clients.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Design company</h4>
-                                          <p>Lorem ipsum dolor sit <a href="#">amet consectetur</a> adipisicing elit, <strong>sed do eiusmod</strong> tempor</p>
-                                          </div>
-                                        </div>
-                                        <h3>Things we done for this client:</h3>
-                                        <ul class="listing">
-                                        <li>Proin dignissim risus ut quam aliquam dignissim.</li>
-                                        <li>Nunc erat eros, cursus et commodo vitae, pulvinar ac libero.</li>
-                                        <li>In erat elit, bibendum vitae commodo vitae, bibendum non justo.</li>
-                                        </ul>
-                                        <a href="#" class="button_12 green">See work</a>  <a href="#" class="button_12 blue">Client web</a>  
-                                      </div>
-                                      
-                                      
-                                        <div class="clearfix"></div>
-              <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
-                                        </div>
-                                        <!--End of page container-->
-                              </div>
-                    </div>
-              </div>
-              <div class="swiper-scrollbar"></div>
-     </div>
-     </div>
+     
       <!--Page 8 content-->
-      <div class="swiper-slide sliderbg blue">
-      <div class="swiper-container swiper-nested">
-               <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                              <div class="slide-inner">
-                                        <div class="pages_container">
-                                        <h2 class="page_title">Latest Tweets</h2>
-                                        <div class="tweet"></div>
-                                        <a href="#" class="button_11 darkblue">Follow Us!</a>
-                                        <div class="clearfix"></div>
-                    <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
-                                        </div>
-                                        <!--End of page container-->
-                              </div>
-                    </div>
-              </div>
-              <div class="swiper-scrollbar"></div>
-     </div>
-     </div>
+     
       <!--Page 9 content-->
-      <div class="swiper-slide sliderbg bluegreen">
-      <div class="swiper-container swiper-nested">
-               <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                              <div class="slide-inner">
-                                        <div class="pages_container">
-                                        
-                                        <h2 class="page_title">Get in touch</h2>
-                                            <h2 id="Note"></h2>
-                                            <div class="form">
-                                            <form class="cmxform" id="CommentForm" method="post" action="">
-                                            <label>Name:</label>
-                                            <input type="text" name="ContactName" id="ContactName" value="" class="form_input required" />
-                                            <label>Email:</label>
-                                            <input type="text" name="ContactEmail" id="ContactEmail" value="" class="form_input required email" />
-                                            <label>Message:</label>
-                                            <textarea name="ContactComment" id="ContactComment" class="form_textarea textarea required" rows="" cols=""></textarea>
-                                            <input type="submit" name="submit" class="form_submit darkblue" id="submit" value="Send" />
-                                            <input class="" type="hidden" name="to"  value="youremaill@yourwebsiteee.com" />
-                                            <input class="" type="hidden" name="subject" value="Contacf form message" />
-                                            <label id="loader" style="display:none;"><img src="images/loader.gif" alt="Loading..." id="LoadingGraphic" /></label>
-                                            </form>
-                                            </div>
-
-                                            
-                                       <h2>Let's socialize</h2>     
-                                            <ul class="social">
-                                            <li class="social_facebook"><a href="#"><img src="images/icons/social/facebook.png" alt="" title="" border="0" /></a></li>
-                                            <li class="social_twitter"><a href="#"><img src="images/icons/social/twitter.png" alt="" title="" border="0" /></a></li>
-                                            <li class="social_google"><a href="#"><img src="images/icons/social/google.png" alt="" title="" border="0" /></a></li>
-                                            <li class="social_pinterest"><a href="#"><img src="images/icons/social/pinterest.png" alt="" title="" border="0" /></a></li>
-                                            <li class="social_flickr"><a href="#"><img src="images/icons/social/flickr.png" alt="" title="" border="0" /></a></li>
-                                            <li class="social_digg"><a href="#"><img src="images/icons/social/digg.png" alt="" title="" border="0" /></a></li>
-                                            </ul>
-                                        <h2>Give Us a call</h2>    
-                                        <a href="tel:123 456 789" class="call_button">Click To Call Now!</a>
-                                        <a href="http://maps.google.com/maps?q=houston+usa&amp;hl=ro&amp;sll=37.0625,-95.677068&amp;sspn=53.961216,114.169922&amp;hnear=Houston,+Harris,+Texas&amp;t=m&amp;z=5" class="map_button">View our location</a>  
-
-                                        <div class="clearfix"></div>
-                                        <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>    
-                                        </div>
-                                        <!--End of page container-->
-                              </div>
-                    </div>
-              </div>
-              <div class="swiper-scrollbar"></div>
-     </div>
-     </div>
        
      <!--End of pages--> 
 
@@ -763,72 +181,15 @@
 <script type="text/javascript" src="{{ STATIC_URL }}js/idangerous.swiper.scrollbar-2.1.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.tabify.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/code.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/load.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/unslider.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/estationinfo/code.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/estationinfo/load.js"></script>
 <!--Twitter Feed-->
-<script type="text/javascript" src="{{ STATIC_URL }}js/twitter/jquery.tweet.js" charset="utf-8"></script>
-<script type="text/javascript" charset="utf-8">
-var $ = jQuery.noConflict();  
-jQuery(function($){
-$(".tweet").tweet({
-  modpath: 'js/twitter/',
-  join_text: "auto",
-  username: "famousthemes",
-  count: 5,
-  auto_join_text_default: "we said,",
-  auto_join_text_ed: "we",
-  auto_join_text_ing: "we were",
-  auto_join_text_reply: "we replied",
-  auto_join_text_url: "we were checking out",
-  loading_text: "loading tweets..."
-});
+<!-- <script type="text/javascript" src="js/twitter/jquery.tweet.js" charset="utf-8"></script> -->
+<script type="text/javascript">
+  $(function() {
+    $('.banner').unslider();
 });
 </script>
-<script type="text/javascript">  
-function ajaxContact(theForm) {
-var $ = jQuery;
-$('#loader').fadeIn();
-var formData = $(theForm).serialize(),
-note = $('#Note');
-$.ajax({
-type: "POST",
-url: "contact-send.php",
-data: formData,
-success: function(response) {
-if ( note.height() ) {      
-note.fadeIn('fast', function() { $(this).hide(); });
-} else {
-note.hide();
-}
-$('#LoadingGraphic').fadeOut('fast', function() {
-//$(this).remove();
-if (response === 'success') {
-  
-  $('#formtitle').hide();
-  
-}
-// Message Sent? Show the 'Thank You' message and hide the form
-result = '';
-c = '';
-if (response === 'success') { 
-  result = 'Your message has been sent. Thank you!';
-  c = 'success';
-} else {
-  result = response;
-  c = 'error';
-}
-note.removeClass('success').removeClass('error').text('');
-var i = setInterval(function() {
-  if ( !note.is(':visible') ) {
-    note.html(result).addClass(c).slideDown('fast');
-    clearInterval(i);
-  }
-}, 40);    
-}); // end loading image fadeOut
-}
-});
-return false;
-}
-</script> 
 </body>
 </html>

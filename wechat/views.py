@@ -70,28 +70,50 @@ def index(request):
 				elif message.type == 'location':
 					response = wechat.response_text(content=u'上报地理位置事件')
 				elif message.type == 'click':
-					if message.key == 'clicktesta':
-						articles = [
-							{
-								'title':'testa1',
-								'description':u'这是测试',
-								'picurl':'http://www.pic16.com/wzcapi/ql-2006/ql2006-1.jpg',
-								'url':'www.baidu.com'
-							},
-							{
-								'title':'testa1',
-								'description':u'这是测试',
-								'picurl':'http://tupian.baike.com/a0_10_74_01000000000000119087416551510_jpg.html',
-								'url':'www.baidu.com'
-							},
-							{
-								'title':'testa1',
-								'description':u'这是测试',
-								'picurl':'http://a.hiphotos.baidu.com/image/w%%3D310/sign=3f6b24fb84d6277fe912343918391f63/91529822720e0cf36fa0febb0946f21fbe09aa1f.jpg',
-								'url':'www.baidu.com'
-							}
-						] 
-						response = wechat.response_news(articles)
+					if message.key == 'estationinfo':
+						articles = [{
+								'title':'成都东客站介绍',
+								'description':u'了解成都东客站概要',
+								'picurl':'http://108.61.194.107/static/images/estationinfo/photos/photo4.jpg',
+								'url':'http://108.61.194.107/wechat/estationinfo/'
+							}]
+					elif message.key == 'estationteamshow':
+						articles = [{
+								'title':'团队展示',
+								'description':u'展示团队构成',
+								'picurl':'http://108.61.194.107/static/images/estationinfo/photos/photo9.jpg',
+								'url':'http://108.61.194.107/wechat/estationteamshow/'
+							}]
+					elif message.key == 'estationnews':
+						articles = [{
+								'title':'最新动态',
+								'description':u'提供最新资讯，了解站点动态',
+								'picurl':'http://108.61.194.107/static/images/estationinfo/photos/photo7.jpg',
+								'url':'http://108.61.194.107/wechat/estationnews/'
+							}]
+					elif message.key == 'estationcenterinfo':
+						articles = [{
+								'title':'中心介绍',
+								'description':u'成都东客运站中心详细介绍',
+								'picurl':'http://108.61.194.107/static/images/estationinfo/photos/photo6.jpg',
+								'url':'http://108.61.194.107/wechat/estationcenterinfo/'
+							}]
+					elif message.key == 'estationmnum':
+						articles = [{
+								'title':'车次动态',
+								'description':u'提供东客运站车次查询信息,掌握车次动态',
+								'picurl':'http://108.61.194.107/static/images/estationinfo/photos/photo1.jpg',
+								'url':'http://108.61.194.107/wechat/estationmnum/'
+							}]
+					elif message.key == 'estationsuggest':
+						articles = [{
+								'title':'投诉建议',
+								'description':u'您的宝贵建议,是我们发展动力',
+								'picurl':'http://108.61.194.107/static/images/estationinfo/photos/photo3.jpg',
+								'url':'http://108.61.194.107/wechat/estationsuggest/'
+							}]
+
+					response = wechat.response_news(articles)
 					#response = wechat.response_text(content=u'自定义菜单点击事件')
 				elif message.type == 'view':
 					response = wechat.response_text(content=u'自定义菜单跳转链接事件')
@@ -105,19 +127,19 @@ def wc_create_menu(request):
 					'name':u'客站资讯',
 					'sub_button':[
                     	{
-                    		'type':'view',
+                    		'type':'click',
                             'name':u'客站介绍',
-                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203349576&idx=1&sn=8ff27199f38b040273d9705802c52b44#rd'
+                            'key' : 'estationinfo'
                     	},
                     	{
-                    		'type':'view',
+                    		'type':'click',
                             'name':u'团队展示',
-                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203349576&idx=1&sn=8ff27199f38b040273d9705802c52b44#rd'
+                            'key':'estationteamshow'
                     	},
                     	{
-                    		'type':'view',
+                    		'type':'click',
                             'name':u'最新动态',
-                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203429156&idx=1&sn=4104fe74654ac831400f8636f36f508a#rd'
+                            'key' : 'estationnews'
                     	},
                     	{
                     		'type':'view',
@@ -130,14 +152,14 @@ def wc_create_menu(request):
 					'name':u'服务中心',
 					'sub_button':[
                         {
-                            'type':'view',
+                            'type':'click',
                             'name':u'中心介绍',
-                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203660894&idx=1&sn=80ead2fab876353a0444691b834b53c8#rd'
+                            'key':'estationcenterinfo'
                         },
                         {
-                            'type':'view',
+                            'type':'click',
                             'name':u'车次动态',
-                            'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203660915&idx=1&sn=10b2a92885a30a9de89ea5bface55600#rd'
+                            'key':'estationmnum'
                         },
                         {
                             'type':'view',
@@ -145,9 +167,9 @@ def wc_create_menu(request):
                             'url':'http://mp.weixin.qq.com/s?__biz=MzA3MjE5MDM3OQ==&mid=203661033&idx=1&sn=637b4e1997cca108fd7236c6ad402754#rd'
                         },
                         {
-                            'type':'view',
+                            'type':'click',
                             'name':u'投诉建议',
-                            'url':'http://115.28.107.224/EastStation/?m=home&c=Complaints'
+                            'key' : 'estationsuggest'
                         }
                     ]
 				},
@@ -163,16 +185,6 @@ def wc_create_menu(request):
                             'type': 'view', 
                             'name': u'游戏互动', 
                             'url': 'http://115.28.107.224/TeCollege/index.php?m=ZhuanPan&a=ZhuanPan'
-                        },
-                        {
-                        	'type': 'click',
-                        	'name': 'clicktestA',
-                        	'key':	'clicktesta'
-                        },
-                        {
-                        	'type':'click',
-                        	'name':'clicktestB',
-                        	'key': 'clicktestb'
                         }
                     ]
 				}
@@ -195,9 +207,18 @@ def manageindex(request):
 """
 wechat east station info
 """
-def esinfoindex(request):
+def esinfo(request):
 	return render_to_response("estation/stationinfo.html",RequestContext(request))
-
+def escenterinfo(request):
+	return render_to_response("estation/stationcenterinfo.html",RequestContext(request))
+def esteamshow(request):
+	return render_to_response("estation/esteamshow.html",RequestContext(request))
+def esnews(request):
+	return render_to_response("estation/stationnews.html",RequestContext(request))
+def esmotorcoachnum(request):
+	return render_to_response('estation/stationmnum.html',RequestContext(request))
+def esstationsuggest(request):
+	return render_to_response('estation/stationsuggest.html',RequestContext(request))
 """
  * * * * * * * * * * * * * * * * * * * * * * * * 
 """

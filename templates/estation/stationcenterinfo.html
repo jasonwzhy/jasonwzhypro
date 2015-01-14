@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="{{ STATIC_URL }}images/estationinfo/apple-touch-icon.png" />
+<link rel="apple-touch-startup-image" href="{{ STATIC_URL }}images/estationinfo/apple-touch-startup-image-320x460.png" />
+<meta name="author" content="FamousThemes" />
+<meta name="description" content="GoMobile - A next generation web app theme" />
+<meta name="keywords" content="mobile web app, mobile template, mobile design, mobile app design, mobile app theme, mobile wordpress theme, my mobile app" />
+<title>GoMobile - A next generation web app theme</title>
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/style.css">
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/metro.css">
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/idangerous.swiper.css">
+<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/estationinfo/swipebox.css">
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'/> -->
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.10.1.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery.validate.min.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="header">
+      <div class="gohome radius20"><a href="#"><img src="{{ STATIC_URL }}images/estationinfo/icons/home.png" alt="" title="" /></a></div>
+      <div class="gomenu radius20"><a href="#" onclick="swiperParent.swipeTo(8);"><img src="{{ STATIC_URL }}images/estationinfo/icons/contact.png" alt="" title="" /></a></div>
+  </div>
+  <div class="swiper-container swiper-parent">
+    <div class="swiper-wrapper">
+    
+      <!--Menu page-->
+      <div class="swiper-slide sliderbg_menu">
+          <div class="swiper-container swiper-nested">
+                   <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                  <div class="slide-inner">
+                                        <!-- <div class="logo"><a href="#">GoMobile</a></div> -->
+                                        <div class="banner">
+                                          <ul>
+                                              <li style="background-image: url({{ STATIC_URL }}images/estationinfo/1.jpg); background-size: 100% 100%;">
+                                                <h3>成都东客运站 客运中心.</h3>
+                                              </li>
+                                              <li style="background-image: url({{ STATIC_URL }}images/estationinfo/2.jpg); background-size: 100% 100%;"><h3>成都东客运站 客运中心.</h3></li>
+                                              <li style="background-image: url({{ STATIC_URL }}images/estationinfo/3.jpg); background-size: 100% 100%;"><h3>成都东客运站 客运中心.</h3></li>
+                                              <li style="background-image: url({{ STATIC_URL }}images/estationinfo/4.jpg); background-size: 100% 100%;"><h3>成都东客运站 客运中心.</h3></li>
+                                          </ul>
+                                          <ol class="dots"><li class="dot">1</li><li class="dot">2</li><li class="dot">3</li><li class="dot active">4</li></ol>
+                                        </div>
+                                        <div class="menu">
+                                        <ul>
+                                        <li class="green"><a href="#" onclick="swiperParent.swipeTo(1);"><img src="{{ STATIC_URL }}images/estationinfo/icons/about.png" alt="" title="" /><span>客运中心</span></a></li>
+                                        <li class="red"><a href="#" onclick="swiperParent.swipeTo(2);"><img src="{{ STATIC_URL }}images/estationinfo/icons/tools.png" alt="" title="" /><span>公交指南</span></a></li>
+                                        <!-- <li class="blue"><a href="#" onclick="swiperParent.swipeTo(3);"><img src="{{ STATIC_URL }}images/estationinfo/icons/blog.png" alt="" title="" /><span>Blog</span></a></li>
+                                        <li class="orange"><a href="#" onclick="swiperParent.swipeTo(4);"><img src="{{ STATIC_URL }}images/estationinfo/icons/docs.png" alt="" title="" /><span>Portfolio</span></a></li>
+                                        <li class="purple"><a href="#" onclick="swiperParent.swipeTo(5);"><img src="{{ STATIC_URL }}images/estationinfo/icons/photos.png" alt="" title="" /><span>Gallery</span></a></li>
+                                        <li class="yellow"><a href="#" onclick="swiperParent.swipeTo(6);"><img src="{{ STATIC_URL }}images/estationinfo/icons/clients.png" alt="" title="" /><span>Clients</span></a></li>
+                                        <li class="pink"><a href="#" onclick="swiperParent.swipeTo(7);"><img src="{{ STATIC_URL }}images/estationinfo/icons/twitter.png" alt="" title="" /><span>Twitter</span></a></li> -->
+                                        <li class="blue"><a href="#" onclick="swiperParent.swipeTo(3);"><img src="{{ STATIC_URL }}images/estationinfo/icons/contact.png" alt="" title="" /><span>联系我们</span></a></li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                        </div>
+                                 </div>
+                         </div>
+                   </div>
+                  <div class="swiper-scrollbar"></div>
+          </div> 
+      </div>
+      
+      <!--Page 1 content-->
+      <div class="swiper-slide sliderbg green">
+      <div class="swiper-container swiper-nested">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                              <div class="slide-inner">
+                                        <div class="pages_container">
+                                        <h3 class="page_title">成都城东汽车客运中心</h3>
+                                        <div class="image_single"><img src="{{ STATIC_URL }}images/estationinfo/page_photo.jpg" alt="" title="" border="0" /></div>
+                                        <!-- <div class="image_caption blue blue_borderbottom">Image title</div> -->
+                                        <!-- <h3>Imagination is our power</h3> -->
+                                        <blockquote>成都城东客运中心位于成都市中心城区东南方向，三环路琉璃立交桥附近，与锦江区人力资源市场，皇经楼公寓，古琉璃场遗址，成自泸赤高速公路毗邻。距离成都市中心天府广场6公里。该站主要发往仁寿方向的班线，以实现联网售票。</blockquote>
+                                        
+                                        <div class="clearfix"></div>
+      									<div class="scrolltop radius20"><a href="#"><img src="{{ STATIC_URL }}images/estationinfo/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+                                        </div>
+                                        <!--End of page container-->
+                              </div>
+                    </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+     </div>
+     </div>
+      
+      <!--Page 2 content-->
+      <div class="swiper-slide sliderbg red">
+      <div class="swiper-container swiper-nested">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                              <div class="slide-inner">
+                                        <div class="pages_container">
+                                        <h2 class="page_title">公交指南</h2>
+                                        <blockquote>3路：九里堤公交站—城东客运中心<br>
+                                        65路：火车北站公交站—城东客运中心<br>
+                                        68路：红星路一段—中和镇<br>
+                                        91路：成都东客站公交站—成都空港基地<br>
+                                        137路：茶店子公交站--十陵公交站<br>
+                                        238路：火车南站公交站--十洪公交站<br>
+                                        31路：荷塘月色--宏济中路<br></blockquote>
+                                        <div class="clearfix"></div>
+                                         <div class="scrolltop radius20"><a href="#"><img src="{{ STATIC_URL }}images/estationinfo/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+                                        </div>
+                                        <!--End of page container-->
+                              </div>
+                    </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+     </div>
+     </div>
+     
+      <!--Page 3 content-->
+  
+     
+     <!--Page 4 content-->
+   
+     
+      <!--Page 5 content-->
+   
+
+      <!--Page 7 content-->
+     
+      <!--Page 8 content-->
+     
+      <!--Page 9 content-->
+      <div class="swiper-slide sliderbg blue">
+      <div class="swiper-container swiper-nested">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                              <div class="slide-inner">
+                                        <div class="pages_container">
+                                        
+                                        <h2 class="page_title">联系我们</h2>
+                                        <div class="image_single"><img src="{{ STATIC_URL }}images/estationinfo/center/contact.jpg" alt="" title="" border="0" /></div>
+                                        <h4>
+                                        官方客服： 028-86307748<br><br>预 售 期：预售期5天
+                                        </h4>
+                                        <div class="image_single"><img src="{{ STATIC_URL }}images/estationinfo/center/map.jpg" alt="" title="" border="0" /></div>
+                                        <h4>地  址 ：成都市成华区邛崃山路(成都东站东广场南侧)</h4>
+                                        <h4>欢迎来电咨询</h4>    
+                                        <a href="tel:123 456 789" class="call_button"><h2>calling...</h2></a>
+                                     
+
+                                        <div class="clearfix"></div>
+                                        <div class="scrolltop radius20"><a href="#"><img src="{{ STATIC_URL }}images/estationinfo/icons/top.png" alt="Go on top" title="Go on top" /></a></div>    
+                                        </div>
+                                        <!--End of page container-->
+                              </div>
+                    </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+     </div>
+     </div>
+       
+     <!--End of pages--> 
+
+    </div>
+    <div class="pagination"></div>
+  </div>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.swipebox.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/idangerous.swiper-2.1.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/idangerous.swiper.scrollbar-2.1.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.tabify.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/unslider.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/estationinfo/code.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/estationinfo/load.js"></script>
+<!--Twitter Feed-->
+<script type="text/javascript" src="js/twitter/jquery.tweet.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.banner').unslider();
+});
+</script>
+</body>
+</html>
