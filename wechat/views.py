@@ -20,7 +20,6 @@ token = "jasonwang"
 @csrf_exempt
 def index(request):
 	if request.method == 'GET':
-		print request.GET
 		signature = request.GET.get('signature','')
 		timestamp = request.GET.get('timestamp','')
 		nonce = request.GET.get('nonce','')
@@ -30,7 +29,6 @@ def index(request):
 		hslst.sort()
 		hstr = "%s%s%s"%tuple(hslst)
 		hstr = hashlib.sha1(hstr).hexdigest()
-		print hstr,signature
 		if hstr==signature:
 			return HttpResponse(echostr)
 		else:
@@ -40,12 +38,10 @@ def index(request):
 		timestamp = request.GET.get('timestamp','')
 		nonce = request.GET.get('nonce','')
 		body_text = request.body
-		print body_text
 		wechat = WechatBasic(token=token)
 		if wechat.check_signature(signature=signature, timestamp=timestamp, nonce=nonce):
 			wechat.parse_data(body_text)
 			message = wechat.get_message()
-			print message.type,message.key
 			if isinstance(message, TextMessage):
 				response = wechat.response_text(content=u'文字信息')
 			elif isinstance(message, VoiceMessage):
@@ -71,7 +67,6 @@ def index(request):
 				elif message.type == 'location':
 					response = wechat.response_text(content=u'上报地理位置事件')
 				elif message.type == 'click':
-					print message.type ,message.key
 					if message.key == 'estationinfo':
 						articles = [{
 								'title':'成都东客站介绍',
@@ -114,12 +109,10 @@ def index(request):
 								'picurl':'http://108.61.194.107/static/images/estationinfo/photos/photo3.jpg',
 								'url':'http://108.61.194.107/wechat/estationsuggest/'
 							}]
-					print articles
 					response = wechat.response_news(articles)
 					#response = wechat.response_text(content=u'自定义菜单点击事件')
 				elif message.type == 'view':
 					response = wechat.response_text(content=u'自定义菜单跳转链接事件')
-		print response
 		return HttpResponse(response)
 
 def wc_create_menu(request):
@@ -192,7 +185,6 @@ def wc_create_menu(request):
 				}
             ]}
 	wechat = WechatBasic(appid='wx5d140785dfae330c', appsecret='7d665a6f144785c72d54ef280380e85e')
-	print wechat.create_menu(menu_dict)
 """
  * * * * * * * * * * * * * * * * * * * * * * * * 
 """
