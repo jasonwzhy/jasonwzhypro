@@ -66,7 +66,7 @@ def index(request):
 						response = wechat.response_text(content=u'普通关注事件')
 				elif message.type == 'unsubscribe':
 					response = wechat.response_text(content=u'取消关注事件')
-				elif mpessage.type == 'scan':
+				elif message.type == 'scan':
 					response = wechat.response_text(content=u'用户已关注时的二维码扫描事件')
 				elif message.type == 'location':
 					response = wechat.response_text(content=u'上报地理位置事件')
