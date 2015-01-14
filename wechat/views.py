@@ -45,6 +45,7 @@ def index(request):
 		if wechat.check_signature(signature=signature, timestamp=timestamp, nonce=nonce):
 			wechat.parse_data(body_text)
 			message = wechat.get_message()
+			print message.type ,message.key,'\n'
 			if isinstance(message, TextMessage):
 				response = wechat.response_text(content=u'文字信息')
 			elif isinstance(message, VoiceMessage):
@@ -69,7 +70,7 @@ def index(request):
 					response = wechat.response_text(content=u'用户已关注时的二维码扫描事件')
 				elif message.type == 'location':
 					response = wechat.response_text(content=u'上报地理位置事件')
-				elif message.type == 'click':
+				elif message.type == 'CLICK':
 					print message.type ,message.key,'\n'
 					if message.key == 'estationinfo':
 						articles = [{
