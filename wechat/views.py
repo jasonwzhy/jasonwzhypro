@@ -112,7 +112,7 @@ def index(request):
 								'picurl':'http://108.61.194.107/static/images/estationinfo/photos/photo3.jpg',
 								'url':'http://108.61.194.107/wechat/estationsuggest/'
 							}]
-
+					print articles
 					response = wechat.response_news(articles)
 					#response = wechat.response_text(content=u'自定义菜单点击事件')
 				elif message.type == 'view':
