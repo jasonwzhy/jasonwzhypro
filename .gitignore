@@ -1,4 +1,5 @@
 # Python bytecode:
+*/.py[co]
 *.py[co]
 
 # Packaging files:
