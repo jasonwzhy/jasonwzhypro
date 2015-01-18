@@ -85,7 +85,9 @@ li.table_row{background-color:#353535;}
 
 ul.social li{ -webkit-border-radius: 200px;-moz-border-radius: 200px;border-radius: 200px;}
 
-a.call_button{ background:url(../../images/estationinfo/icons/phone.png) no-repeat left #85af5d;}
+/*a.call_button{ background:url(../../images/estationinfo/icons/phone.png) no-repeat left #85af5d;}*/
+
+a.call_button{ background:url(../../images/estationinfo/icons/phone.png) no-repeat 25% 30% #85af5d;}
 a.map_button{ background:url(../../images/estationinfo/icons/map_pin.png) no-repeat left #29aae3;}
 
 /* CSS Media Queries
