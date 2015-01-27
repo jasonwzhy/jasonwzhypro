@@ -27,7 +27,7 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+# STATIC_ROOT = os.path.join(BASE_DIR, "static/") # open for nginx
 STATICFILES_DIRS = (
    os.path.join(BASE_DIR, 'static'),
 )
@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-#    'blog',
+    'blog',
 )
 
 MIDDLEWARE_CLASSES = (
