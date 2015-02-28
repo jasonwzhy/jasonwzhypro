@@ -2,7 +2,7 @@
 {% block blogpost%}
 {% for blog in blogs %}
 <div class="blog-post">
-  <h2 class="blog-post-title">{{blog.title}}</h2>
+  <a href="{{blog.id}}"><h2 class="blog-post-title">{{blog.title}}</h2></a>
   <p class="blog-post-meta">{{blog.createdate}} <a href="#">Jasonwzhy</a></p>
   <!-- <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
   <hr> -->

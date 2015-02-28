@@ -9,7 +9,8 @@ def index(request):
 	blogs = Article.objects.all()
 
 	return render_to_response("blog/blogpost.html",{"blogs":blogs},RequestContext(request))
-
+def blogitem(request):
+	
 
 ###  Manage ####
 def manage(request):
