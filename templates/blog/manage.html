@@ -6,10 +6,11 @@
 {% block manage%}
   {% csrf_token %}
   <textarea id="editor" placeholder="这里输入内容" autofocus></textarea>
+  <button id="editbtn" value="submit">submit</button>
 {% endblock %}
 
 {% block jscript%}
-  <script src="{{STATIC_URL}}blog/js/jquery.min.js"></script>
+  
   <script src="{{STATIC_URL}}blog/js/module.js"></script>
   <script src="{{STATIC_URL}}blog/js/hotkeys.js"></script>
   <script src="{{STATIC_URL}}blog/js/uploader.js"></script>
@@ -24,6 +25,11 @@
         connectionCount: 3,
         leaveConfirm: '正在上传文件，如果离开上传会自动取消'
       }
+    });
+    $("#editbtn").click(function() {
+      var editorval = editor.getValue();
+      console.log(editorval);
+      // body...
     });
   </script>
 {% endblock %}
