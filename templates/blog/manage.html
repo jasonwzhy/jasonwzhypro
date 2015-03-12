@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+{% block cssstyle%}
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}blog/css/simditor.css">
+{% endblock %}
+
+{% block manage%}
+  {% csrf_token %}
+  <textarea id="editor" placeholder="这里输入内容" autofocus></textarea>
+{% endblock %}
+
+{% block jscript%}
+  <script src="{{STATIC_URL}}blog/js/jquery.min.js"></script>
+  <script src="{{STATIC_URL}}blog/js/module.js"></script>
+  <script src="{{STATIC_URL}}blog/js/hotkeys.js"></script>
+  <script src="{{STATIC_URL}}blog/js/uploader.js"></script>
+  <script src="{{STATIC_URL}}blog/js/simditor.js"></script>
+  <script>
+    var editor = new Simditor({
+      textarea: $('#editor'),
+      upload: {
+        url: 'upload/',
+        params: null,
+        fileKey: 'upload_file',
+        connectionCount: 3,
+        leaveConfirm: '正在上传文件，如果离开上传会自动取消'
+      }
+    });
+  </script>
+{% endblock %}
